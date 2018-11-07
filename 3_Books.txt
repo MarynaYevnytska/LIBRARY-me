@@ -1,0 +1,32 @@
+List of books
+{bib: "1", autor: Sergey Yesenin, title: Letter to woman}
+{bib: "1", autor: Sergey Yesenin, title: Black man }
+{bib: "1", autor: Sergey Yesenin, title: About love}
+{bib: "1", autor: Sergey Yesenin, title: Don't regret, don't call, don't cry}
+{bib: "1", autor: Sergey Yesenin, title: Poems}
+{bib: "1", autor: Sergey Yesenin, title: Country of rascal}
+***
+{bib: "2", autor: Agatha Christie, title: "The Murder of Roger Ackroyd"}
+{bib: "2", autor: Agatha Christie, title: "Peril at End House" }
+{bib: "2", autor: Agatha Christie, title: "Murder on the Orient Express "}
+{bib: "2", autor: Agatha Christie, title: "The ABC Murders" }
+{bib: "2", autor: Agatha Christie, title: "And Then There Were None" }
+{bib: "2", autor: Agatha Christie, title: "Five Little Pigs" }
+{bib: "2", autor: Agatha Christie, title: "Crooked House" }
+***
+{bib: "3", autor: Michael Bulgakov, title: Heart of a Dog}
+{bib: "3", autor: Michael Bulgakov, title: Days of the Turbins}
+***
+{bib: "4", autor: Ivan Krilov, title: Krylov's Fables}
+***
+{bib: "5", autor: Darya Dontsova, title: Gimnaziya neblagorodnykh devits}
+***
+{bib: "6", autor: Alex Pushkin, title: Eugene Onegin }
+***
+{bib: "7", autor: Alex Block, title: Poems}
+***
+{bib: "8", autor: Viktor Gugo, title: Poems }
+***
+{bib: "9", autor: Dale Carnegie, title:How To Win Friends and Influence People}
+***
+{bib:"10", name: DBN, title: OVK }

@@ -1,30 +1,46 @@
 
 
 class Autor
-  attr_reader :name, :biographi
-
-    def initialize (name = "Autor name", biographi)
-      @name, @biographi = name, biographi
+  attr_reader :name, :bib
+  @storage_file = "2_Autors.txt"
+    def initialize (name = "Autor name")
+      @autor, @bib = name, bib
+    end
+    def view_each
+        file_name=@storage_file
+        puts file_name
+        list = File.open("2_Autors.txt", 'r') {|file| file.readlines}
+        puts list
     end
 end
 
 
-class Book
+class Book < Autor
+  @storage_file= "3_Books.txt"
+  attr_reader :title
+  @storage_file= "2_Autors.txt"
+  def initialize (title)
+    @title = title
+  end
 end
 
 
 class Reader
-  attr_accessor :name, :email, :city, :street, :house
   require 'json'
+  attr_accessor :name, :email, :city, :street, :house
+    @@count=0
+
     def initialize (name, email, city, street, house)
       @name, @email, @city, @street, @house  = name, email, city, street, house
     end
 
     def add_new_reader
-      readers = {name:@name, email: @email,city: @city, street: @street, house:@house }
+      id=@@count.to_s
+      readers = {id:"ID-"+id, name:@name, email: @email,city: @city, street: @street, house:@house }
       string = readers.to_json
       puts string
       File.open("1_Readers.txt",'a') {|file| file.puts string}
+      @@count+=1
       puts "ADD"
       puts "!!!!WOW!!!! We are so glad than you #{@name} will be a part of our community, you email is #{@email}, you live in #{@city},on the street #{@street}, in the house #{@house}"
     end
@@ -32,6 +48,7 @@ class Reader
       def check_old_reader
         string = "{\"name\":\"#{@name}\",\"email\":\"#{@email}\",\"city\":\"#{@city}\",\"street\":\"#{@street}\",\"house\":\"#{@house}\"}"
         reders_list = File.open("1_Readers.txt", 'r') {|file| file.readlines}
+        puts reders_list
         puts a=reders_list.size
         puts reders_list[0].class
         puts reders_list[-1]
@@ -45,8 +62,9 @@ class Reader
         end
 end
 
-#class Order
-#end
+class Order
+
+end
 
 def questions
    print yield
@@ -72,4 +90,9 @@ if new_old=="yes" or new_old=="Yes"
   puts "Welcom! Lets check  your information!"
   reader.check_old_reader
 end
-puts "lets GO"
+puts "Lets go! Represent for yor the list of aviable autors"
+autors_list=Autor.new
+autors_list.view_each
+autor_of_book = questions {"Enter autors name or bib-numer :"}
+books_list=Book.new(autor_of_book)
+books_list.view_each
