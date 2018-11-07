@@ -22,13 +22,14 @@ class Book < Autor
   def initialize (title)
     @title = title
   end
+
 end
 
 
 class Reader
   require 'json'
   attr_accessor :name, :email, :city, :street, :house
-    @@count=0
+    @@count=File.open("1_Readers.txt", 'r') {|file| file.readlines}.size
 
     def initialize (name, email, city, street, house)
       @name, @email, @city, @street, @house  = name, email, city, street, house
@@ -64,6 +65,8 @@ end
 
 class Order
 
+  def rating_of_books
+  end
 end
 
 def questions
@@ -96,3 +99,5 @@ autors_list.view_each
 autor_of_book = questions {"Enter autors name or bib-numer :"}
 books_list=Book.new(autor_of_book)
 books_list.view_each
+statistica=Order.new
+statistica.top_book
