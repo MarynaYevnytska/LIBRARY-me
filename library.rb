@@ -48,8 +48,20 @@ class Reader
       @@count+=1
       puts "!!!!WOW!!!! We are so glad than you #{@name} will be a part of our community, you email is #{@email}, you live in #{@city},on the street #{@street}, in the house #{@house}"
     end
-      def check_old_reader
+      def current_reader
+        readers = "name,#{@name},email,#{@email},city, #{@city},street,#{ @street},house, #{@house}"
+        exist_readers = File.open(@@storage_file, "r") {|line| line.readlines}
+        for i in 0...exist_readers.length do
+          if readers.chomp == exist_readers[i].chomp
+            puts "The reader exits, glad to see you "
+            current_reader = exist_readers[i].chomp
+          else
+            puts "Sorry, I don't find the reader. Try again"
+            welcom.self.call
+          end
         end
+        puts current_reader
+      end
 end
 
 
@@ -85,7 +97,7 @@ if new_old=="yes" or new_old == "Yes"
       end
   else
   puts "Welcom! Lets check  your information!"
-  reader.check_old_reader
+  reader.current_reader
   end
 end
   welcom.call
