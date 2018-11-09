@@ -1,15 +1,16 @@
 
-
 class Autor
+    require 'json'
   attr_reader :name, :bib
   @storage_file = "2_Autors.json"
+  file_name = @storage_file
     def initialize (name = "Autor name")
       @autor, @bib = name, bib
     end
     def view_each
         file_name=@storage_file
         puts file_name
-        list = File.open("2_Autors.json", 'r') {|file| file.readlines}
+        list = File.open(file_name, 'r') {|file| file.readlines}
         puts list
     end
 end
@@ -27,56 +28,31 @@ end
 
 class Reader
   require 'json'
+  @@storage_file= "1_Readers.txt"
   attr_accessor :name, :email, :city, :street, :house
-    @@count=File.open("1_Readers.json", 'r') {|file| file.readlines}.size
+    @@count=File.open(@@storage_file, 'r') {|file| file.readlines}.size
     def initialize (name, email, city, street, house)
       @name, @email, @city, @street, @house  = name, email, city, street, house
     end
 
     def add_new_reader
-      readers = {"name_US-#{@@count}": @name, "email-US-#{@@count}": @email, "city US-#{@@count}": @city, "streetUS-#{@@count}": @street, "houseUS-#{@@count}": @house, }
-      string = JSON.generate(readers)
-      puts readers.class
-      puts readers
-      puts string
-      puts string.class
-      puts "//////////////////////////write//////////////////////////////"
-      exist_readers = File.read ("1_Readers.json")#{|file| file.readline}
-      puts exist_readers.class
-      puts exist_readers
-      exist_readers_hash = JSON.parse(exist_readers)
-      puts exist_readers_hash.class
-      puts exist_readers_hash['name_US-2']
-
-
-      #valid = exist_readers.include?(readers)
-      File.open("1_Readers.json","r",encoding='utf-8') {|file| file.puts string}
+      readers = "name,#{@name},email,#{@email},city, #{@city},street,#{ @street},house, #{@house}"
+      exist_readers = File.open(@@storage_file, "r") {|line| line.readlines}
+      for i in 0...exist_readers.length do
+        if readers.chomp == exist_readers[i].chomp
+          puts "The reader exits, try again, please "
+          welcom.self.call
+        end
+      end
+      File.open(@@storage_file,"a") {|file| file.puts readers.chomp}
       @@count+=1
-      puts "ADD"
       puts "!!!!WOW!!!! We are so glad than you #{@name} will be a part of our community, you email is #{@email}, you live in #{@city},on the street #{@street}, in the house #{@house}"
     end
-
       def check_old_reader
-        string = "{\"name\":\"#{@name}\",\"email\":\"#{@email}\",\"city\":\"#{@city}\",\"street\":\"#{@street}\",\"house\":\"#{@house}\" }"
-        reders_list = File.read('1_Readers.json')
-        reders_list_hash = JSON.parse(reders_list)
-        puts reders_list.class
-        puts reders_list_hash
-        puts reders_list.class
-        puts reders_list_hash.class
-        puts string.class
-        a=reders_list.size
-        puts reders_list[-1].class
-        puts reders_list[-1]
-        puts string
-        puts c =reders_list[-1].size
-        puts c_1 = string.size
-        puts c == c_1
-        puts string == reders_list[-1]
-        b = reders_list.include?(string)
-        puts b
         end
 end
+
+
 
 class Order
 
@@ -89,6 +65,7 @@ def questions
   answer = gets.chomp
 end
 
+def welcom
 puts "Hello, I am Marina, glad to see you into our Library"
 new_old = questions {"Are you first time there? (Enter Yes or No):"}
 name = questions {"Enter you name:"}
@@ -109,16 +86,12 @@ if new_old=="yes" or new_old == "Yes"
   else
   puts "Welcom! Lets check  your information!"
   reader.check_old_reader
+  end
 end
-
-
-
+  welcom.call
   puts "Lets go! Represent for yor the list of aviable autors"
   autors_list=Autor.new
   autors_list.view_each
   autor_of_book = questions {"Enter autors name or bib-numer :"}
-  books_list=Book.new(autor_of_book)
   books_list.view_each
   statistica=Order.new
-
-#statistica.top_book
