@@ -1,7 +1,7 @@
 {
   "id-1" :  {
     {{"bib": "1"}, {"title": "Don't regret, don't call, don't cry"}, {"date":"20.09.2016...20.10.2016"}},
-    {{"bib": "2"}, {"title": "The Murder of Roger Ackroyd"}, {"date":"20.09.2016"}},
+    {{"bib": "2"}, {"title": "The Murder of Roger Ackroyd"}, {"date":"20.09.2016...20.10.2016"}},
     {{"bib": "3"}, {"title": "Heart of a Dog"}, {"date":"20.09.2016"}},
     {{"bib": "4"}, {"title": "Don't regret, don't call, don't cry"}, {"date":"20.09.2016"}},
     {{"bib": "1"}, {"title": "Black man"}, {"date":"20.09.2016"}},
