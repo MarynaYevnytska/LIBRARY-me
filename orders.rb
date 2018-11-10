@@ -120,8 +120,5 @@ puts "#{readers[max_2_step_inside(reader_arr,0,0)]}"
 print "The most popular autor is: "
 pop_writer=max_2_step_inside(books_arr,1,2)
 puts "#{writers[max_2_step_inside(books_arr,1,2)]}"
-puts "The most read book is"
-#case pop_writer
- puts max_include(yesenin,book_name_yesenin)
-#when "2" def max_include(yesenin,book_name_yesenin)
-#when "3" def max_include(yesenin,book_name_yesenin)
+puts "The most read book still a secret yet "
+#puts max_include(yesenin,book_name_yesenin)
