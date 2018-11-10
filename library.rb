@@ -33,7 +33,6 @@ class Reader
     attr_accessor :name, :email, :city, :street, :house
     @@storage_file= "1_Readers.txt"
     #@@count=File.open(@@storage_file, 'r') {|file| file.readlines}.size  # For creating unique - ID
-
     def initialize (name, email, city, street, house)
       @name, @email, @city, @street, @house  = name, email, city, street, house
     end
@@ -110,10 +109,16 @@ end
 def represent
   puts "Lets go! Represent for yor the list of aviable autors"
   autors_list = Autor.new
+  orders = Order.new
   autors_list.view_each("2_Autors.json")
   bib_of_book = questions {"Enter bib-number-"}
   books_list = Book.new
   books_list.view_each_by_bib("3_Books.txt",bib_of_book )
+  puts "I could tell you about our books"
+  h_top_book = questions {"Do you want to know which book is the most readed? (y/n): "}
+  orders.hight_top_book  if top_book == "y"
+  n_top_book = questions {"Do you want to know  list of the most readed books ? (Enter number) TOP-"}
+
 end
 start = questions {"Continue(y/n)- "}
 welcom if start == "y"
