@@ -1,0 +1,4 @@
+alias run="ruby library.rb"
+alias run1="ruby p_c.rb"
+alias run2="ruby json.rb"
+alias run3="ruby orders.rb"

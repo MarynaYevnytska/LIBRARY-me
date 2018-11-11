@@ -5,7 +5,7 @@ List of books
  bib -  1 ,4, autor -  Sergey Yesenin ,  title -  Poems
  bib -  1 ,5, autor -  Sergey Yesenin ,  title -  Country of rascal
 **
- bib -  2 ,1, autor -  Agatha Christie ,  title -  The Murder of Roger Ackroyd
+ bib -  2 ,1, autor -  Agatha Christie ,  title -  The Murder of Roger Ackroyd 
  bib -  2 ,2, autor -  Agatha Christie ,  title -  Peril at End House
  bib -  2 ,3, autor -  Agatha Christie ,  title -  Murder on the Orient Express
  bib -  2 ,4, autor -  Agatha Christie ,  title -  The ABC Murders
@@ -29,3 +29,4 @@ List of books
  bib -  9 ,1, autor -  Dale Carnegie ,  title -  How To Win Friends and Influence People
 ***
  bib - 10 ,1, name -  DBN ,  title -  OVK
+ PushkinBlockGugoCarnegieDBN
