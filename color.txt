@@ -1,2 +1,0 @@
-red,001,yellow,002, green,003,blue,004
-001,red,002,yellow,003,green,004,blue
