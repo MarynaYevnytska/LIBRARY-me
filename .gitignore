@@ -10,6 +10,7 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+Entities:/
 
 # Used by dotenv library to load environment variables.
 # .env
@@ -21,11 +22,7 @@ build/
 *.bridgesupport
 build-iPhoneOS/
 build-iPhoneSimulator/
-Entities:/Author.rb
-Entities:/Book.rb
-Entities:/Moduls.rb
-Entities:/Order.rb
-Entities:/Reader.rb
+
 
 ## Specific to RubyMotion (use of CocoaPods):
 #
