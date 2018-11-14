@@ -6,3 +6,4 @@ class Order
       @reader = reader
       @date = date
     end
+end
