@@ -1,7 +1,8 @@
 class Author
   attr_reader :name, :bibliographi
-    def initialize(name, bibliographi = '')
+
+    def initialize(name, biography = '')
       @name = name
-      @bibliographi = bibliographi
+      @biography = biography
     end
 end
