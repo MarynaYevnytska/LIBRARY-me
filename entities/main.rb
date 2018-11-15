@@ -11,7 +11,6 @@ names_autor.each do |item|
   author = Author.new"#{item}"
   puts Author.name
   puts author.not_empty
-  puts author.equal_string
-  puts author.equal_number
-  puts author.hi_author
+  puts author.validate_class(item,String)
+  puts author.validate_class(item,Integer)
 end
