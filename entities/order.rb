@@ -3,10 +3,7 @@
 class Order
   attr_reader :book, :reader, :date
 
-  def initialize(book, reader, date)
-    Validation.not_empty(book, reader, date)
-    Validation.egual_string(book, reader)
-    Validation.egual_string(date)
+  def initialize(book, reader, date = Time.now)
     @book = book
     @reader = reader
     @date = date
