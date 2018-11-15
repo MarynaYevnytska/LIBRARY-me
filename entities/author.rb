@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Author
   attr_reader :name, :biography
 
