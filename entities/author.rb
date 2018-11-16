@@ -9,11 +9,15 @@ class Author
   end
 
   def not_empty(object)
-    puts "Yes #{object}is not empty" unless object.empty?
+    raise if object.to_s.empty?
+  rescue RuntimeError
+    puts 'This value is empty'
   end
 
   def validate_class(object, klass)
-    puts "Yes #{object} is #{klass}" if object.is_a? klass
+    raise unless object.is_a? klass
+  rescue RuntimeError
+    puts "Type of data #{object} is not valid"
   end
 
   def validation(*arguments)
