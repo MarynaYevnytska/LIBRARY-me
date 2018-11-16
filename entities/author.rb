@@ -11,7 +11,7 @@ class Author
   def not_empty(object)
     raise if object.to_s.empty?
   rescue RuntimeError
-    puts 'This value is empty'
+    puts 'This value is so empty'
   end
 
   def validate_class(object, klass)
