@@ -4,13 +4,10 @@ require_relative 'author.rb'
 require_relative 'book.rb'
 require_relative 'order.rb'
 require_relative 'reader.rb'
-
-names_autor = ["Nic", "Mat", "David", 1, "", ]
-
-names_autor.each do |item|
-  author = Author.new"#{item}"
-  puts Author.name
-  puts author.not_empty
-  puts author.validate_class(item,String)
-  puts author.validate_class(item,Integer)
+count = 0
+names_author = ['Nic', 'Mat', 'David', 1, '']
+describ_biography = %w[Happyness Desert Love Freedom]
+names_author.each do |item|
+  author = Author.new"#{item}, #{describ_biography[count]}"
+  count +=1
 end
