@@ -11,7 +11,7 @@
 /test/version_tmp/
 /tmp/
 Entities:/
-entities/main.rb
+/entities/main.rb
 
 # Used by dotenv library to load environment variables.
 # .env
