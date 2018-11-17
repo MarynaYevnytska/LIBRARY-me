@@ -3,27 +3,23 @@
 class Author
   attr_reader :name, :biography
   def initialize(name, biography = '')
-    validation(name, biography)
     @name = name
     @biography = biography
+    validation(@name, @biography)
   end
 
   def  validate_emptiness(object)
-    raise if object.to_s.empty?
-  rescue RuntimeError
-    puts 'This value is so empty'
+    raise TypeError, 'EMPTY' if object.to_s.empty?
   end
 
   def validate_class(object, klass)
-    raise unless object.is_a? klass
-  rescue RuntimeError
-    puts "Type of data #{object} is not valid"
+    raise TypeError, 'Wrong Data'  unless object.is_a? klass
   end
 
-  def validation(*arguments)
-    arguments.each do |item|
-      validate_class(item, String)
-      validate_emptiness(item)
-    end
+  def validation(name,biography)
+      validate_class(name, String)
+      validate_emptiness(name)
+      validate_class(biography, String)
+      validate_emptiness(biography)
   end
 end
