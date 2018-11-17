@@ -8,7 +8,7 @@ class Author
     @biography = biography
   end
 
-  def not_empty(object)
+  def  validate_emptiness(object)
     raise if object.to_s.empty?
   rescue RuntimeError
     puts 'This value is so empty'
@@ -23,7 +23,7 @@ class Author
   def validation(*arguments)
     arguments.each do |item|
       validate_class(item, String)
-      not_empty(item)
+      validate_emptiness(item)
     end
   end
 end
