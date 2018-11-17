@@ -9,7 +9,7 @@ class Author
   end
 
   def  validate_emptiness(object)
-    raise TypeError, 'EMPTY' if object.to_s.empty?
+    raise TypeError, 'EMPTY value' if object.to_s.empty?
   end
 
   def validate_class(object, klass)
