@@ -12,6 +12,8 @@
 /tmp/
 Entities:/
 entities/main.rb
+entities/validation.rb
+
 
 
 # Used by dotenv library to load environment variables.

@@ -5,6 +5,8 @@ require_relative 'entities/book.rb'
 require_relative 'entities/order.rb'
 require_relative 'entities/reader.rb'
 require 'date'
+require_relative 'moduls/validation.rb'
+include Validation
 
 author1 = Author.new('Sergey Yesenin', 'Happyness')
 author2 = Author.new('Agatha Christie', 'Desert')

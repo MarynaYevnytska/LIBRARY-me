@@ -3,8 +3,6 @@
 class Reader
   attr_accessor :name, :email, :city, :street, :house
 
-  include Validation
-
   def initialize(**args)
     @name = args[:name]
     @email = args[:email]
