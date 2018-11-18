@@ -12,7 +12,6 @@
 /tmp/
 Entities:/
 entities/main.rb
-control/
 
 
 # Used by dotenv library to load environment variables.

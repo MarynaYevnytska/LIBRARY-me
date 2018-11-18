@@ -1,25 +1,22 @@
 # frozen_string_literal: true
 
+require_relative 'validation.rb'
+
 class Author
   attr_reader :name, :biography
+
+  include Validation
+
   def initialize(name, biography = '')
     @name = name
     @biography = biography
-    validation(@name, @biography)
+    validation(@name)
   end
 
-  def  validate_emptiness(object)
-    raise TypeError, 'EMPTY value' if object.to_s.empty?
-  end
+  private
 
-  def validate_class(object, klass)
-    raise TypeError, 'Wrong Data'  unless object.is_a? klass
-  end
-
-  def validation(name,biography)
-      validate_class(name, String)
-      validate_emptiness(name)
-      validate_class(biography, String)
-      validate_emptiness(biography)
+  def validation(name)
+    validate_class(name, String)
+    validate_emptiness(name)
   end
 end
