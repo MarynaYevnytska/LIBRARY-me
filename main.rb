@@ -20,7 +20,6 @@ author4 = Author.new('Ivan Krilov', 'Freedom')
 author6 = Author.new('Alex Pushkin')
 author7 = Author.new(7) # ERRROR
 
-
 book1 = Book.new('Black man', author1)
 book2 = Book.new('About love', author1)
 book3 = Book.new('The Murder of Roger Ackroyd', author2)

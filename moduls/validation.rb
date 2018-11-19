@@ -8,5 +8,4 @@ module Validation
   def validate_class(object, klass)
     raise WrongClassError unless object.is_a? klass
   end
-
 end
