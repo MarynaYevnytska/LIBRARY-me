@@ -2,10 +2,6 @@
 
 module Custom_errors
 
-  #def custom_errors_empty
-       #puts yield
-  #end
-
   def custom_errors_klass(object, klass)
     case object.class == klass
     when klass != String
