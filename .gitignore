@@ -13,8 +13,7 @@
 Entities:/
 entities/main.rb
 entities/validation.rb
-
-
+error/custom_errors.rb
 
 # Used by dotenv library to load environment variables.
 # .env

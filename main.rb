@@ -6,19 +6,20 @@ require_relative 'entities/order.rb'
 require_relative 'entities/reader.rb'
 require 'date'
 require_relative 'moduls/validation.rb'
-require_relative 'error/custom_errors.rb'
+require_relative 'error/errors.rb'
 
 include Validation
-include Custom_errors
+include Errors
 
 author1 = Author.new('Sergey Yesenin', 'Happyness')
+author9 = Author.new('') # ERRROR
 author8 = Author.new(8) # ERRROR
 author2 = Author.new('Agatha Christie', 'Desert')
 author3 = Author.new('Michael Bulgakov', 'Love')
 author4 = Author.new('Ivan Krilov', 'Freedom')
 author6 = Author.new('Alex Pushkin')
 author7 = Author.new(7) # ERRROR
-author9 = Author.new("") # ERRROR
+
 
 book1 = Book.new('Black man', author1)
 book2 = Book.new('About love', author1)

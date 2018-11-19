@@ -2,14 +2,11 @@
 
 module Validation
   def  validate_emptiness(object)
-    raise TypeError, 'Value is empty' if object.to_s.empty?
-  rescue
-    puts "Value musn't be empty!" #custom_errors_empty {"Value musn't be empty!"}
+    raise EmptyStringError if object.to_s.empty?
   end
 
   def validate_class(object, klass)
-    raise TypeError, 'Wrong Data' unless object.is_a? klass
-  rescue
-    custom_errors_klass(object, klass)
+    raise WrongClassError unless object.is_a? klass
   end
+
 end
