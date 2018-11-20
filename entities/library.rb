@@ -8,6 +8,7 @@ class Library
     @books = []
     @readers = []
     @orders = []
+    load
   end
 
   def add(entity)

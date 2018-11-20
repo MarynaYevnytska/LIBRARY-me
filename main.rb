@@ -4,15 +4,19 @@ require_relative 'entities/author.rb'
 require_relative 'entities/book.rb'
 require_relative 'entities/order.rb'
 require_relative 'entities/reader.rb'
-require_relative 'entities/librarry.rb'
-require 'date'
+require_relative 'entities/library.rb'
 require_relative 'moduls/validation.rb'
+require_relative 'moduls/load.rb'
 require_relative 'error/errors.rb'
+require 'date'
+require 'yaml'
 
 include Validation
 include Errors
+include Storage
 
 library = Library.new
+
 authors = [author1 = Author.new('Sergey Yesenin', 'Happyness'),
            author2 = Author.new('Agatha Christie', 'Desert'),
            author3 = Author.new('Michael Bulgakov', 'Love'),
@@ -32,16 +36,21 @@ readers = [reader1 = Reader.new(name: 'Mat', email: 'email@email', city: 'Dnipro
            reader5 = Reader.new(name: 'Kat', email: 'freemail@freemail', city: 'Oslo', street: 'Street', house: 11),
            reader6 = Reader.new(name: 'Dat', email: 'freemail@efreemail', city: 'Tokio', street: 'Street', house: 12)]
 
-ordaers = [order1 = Order.new(book1, reader1),
-           order3 = Order.new(book1, reader2),
-           order4 = Order.new(book1, reader3),
-           order5 = Order.new(book1, reader4),
-           order6 = Order.new(book2, reader2),
-           order7 = Order.new(book3, reader3),
-           order8 = Order.new(book4, reader4),
-           order9 = Order.new(book5, reader5)]
+orders = [order1 = Order.new(book1, reader1),
+          order3 = Order.new(book1, reader2),
+          order4 = Order.new(book1, reader3),
+          order5 = Order.new(book1, reader4),
+          order6 = Order.new(book2, reader2),
+          order7 = Order.new(book3, reader3),
+          order8 = Order.new(book4, reader4),
+          order9 = Order.new(book5, reader5)]
 
 authors.each { |author| library.add(author) }
 books.each { |book| library.add(book) }
 readers.each { |reader| library.add(reader) }
-ordaers.each { |ordaer| library.add(ordaer) }
+orders.each { |order| library.add(order) }
+
+library.save(library.authors)
+library.save(library.books)
+library.save(library.readers)
+library.save(library.orders)
