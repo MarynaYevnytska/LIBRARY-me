@@ -11,7 +11,6 @@ class Library
     load_db
   end
 
-
   def add(entity)
     case entity
     when Author then @authors.push(entity)
@@ -21,4 +20,18 @@ class Library
     else raise UndefinedLibraryEntity
     end
   end
+
+  def datas_store
+    authors={authors:@authors}
+    books={books:@books}
+    readers={readers:@readers}
+    orders={orders:@readers}
+    list_of_entity=[authors,books,readers,orders]
+  end
+
+  def save_to_store
+    save(datas_store)
+  end
+
+
 end

@@ -9,7 +9,7 @@ require_relative 'moduls/validation.rb'
 require_relative 'moduls/load.rb'
 require_relative 'error/errors.rb'
 require 'date'
-require 'yaml/store'
+require 'yaml'
 
 include Validation
 include Errors
@@ -46,10 +46,7 @@ orders = [order1 = Order.new(book1, reader1),
           order9 = Order.new(book5, reader5)]
 
 authors.each { |author| library.add(author) }
-books.each { |book| library.add(book) }
+books.each { |book| library.add(book)}
 readers.each { |reader| library.add(reader) }
 orders.each { |order| library.add(order) }
-library.save(library.authors)
-library.save(library.books)
-library.save(library.readers)
-library.save(library.orders)
+library.save_to_store
