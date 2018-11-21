@@ -7,6 +7,7 @@ require_relative 'entities/reader.rb'
 require_relative 'entities/library.rb'
 require_relative 'moduls/validation.rb'
 require_relative 'moduls/load.rb'
+require_relative 'moduls/statistica.rb'
 require_relative 'error/errors.rb'
 require 'date'
 require 'yaml'
@@ -14,10 +15,11 @@ require 'yaml'
 include Validation
 include Errors
 include Storage
+include Statistica
 
 library = Library.new
-puts library.autors
-
+puts library.class
+#library.most_popular_book
 
 authors = [author1 = Author.new('Sergey Yesenin', 'Happyness'),
            author2 = Author.new('Agatha Christie', 'Desert'),
