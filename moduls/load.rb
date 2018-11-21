@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'yaml'
-
 module Storage
   FILE_NAME = 'database/database.yml'
   def save(object)

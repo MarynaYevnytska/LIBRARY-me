@@ -16,6 +16,8 @@ include Errors
 include Storage
 
 library = Library.new
+puts library.autors
+
 
 authors = [author1 = Author.new('Sergey Yesenin', 'Happyness'),
            author2 = Author.new('Agatha Christie', 'Desert'),
