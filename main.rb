@@ -18,8 +18,6 @@ include Storage
 include Statistica
 
 library = Library.new
-puts library.class
-#library.most_popular_book
 
 authors = [author1 = Author.new('Sergey Yesenin', 'Happyness'),
            author2 = Author.new('Agatha Christie', 'Desert'),
@@ -43,14 +41,20 @@ readers = [reader1 = Reader.new(name: 'Mat', email: 'email@email', city: 'Dnipro
 orders = [order1 = Order.new(book1, reader1),
           order3 = Order.new(book1, reader2),
           order4 = Order.new(book1, reader3),
-          order5 = Order.new(book1, reader4),
-          order6 = Order.new(book2, reader2),
+          order5 = Order.new(book1, reader3),
+          order6 = Order.new(book2, reader3),
           order7 = Order.new(book3, reader3),
           order8 = Order.new(book4, reader4),
           order9 = Order.new(book5, reader5)]
 
 authors.each { |author| library.add(author) }
-books.each { |book| library.add(book)}
+books.each { |book| library.add(book) }
 readers.each { |reader| library.add(reader) }
 orders.each { |order| library.add(order) }
+library.datas_store
 library.save_to_store
+most_popular_book(library.orders)
+top_reader(library.orders)
+
+# self.top_position(library.orders,:reader,:name)
+# self.top_position(set,:book, :title)

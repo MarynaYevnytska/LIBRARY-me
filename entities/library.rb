@@ -22,16 +22,14 @@ class Library
   end
 
   def datas_store
-    authors={authors:@authors}
-    books={books:@books}
-    readers={readers:@readers}
-    orders={orders:@readers}
-    list_of_entity=[authors,books,readers,orders]
+    authors = { authors: @authors }
+    books = { books: @books }
+    readers = { readers: @readers }
+    orders = { orders: @readers }
+    list_of_entity = [authors, books, readers, orders]
   end
 
   def save_to_store
     save(datas_store)
   end
-
-
 end
