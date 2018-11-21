@@ -1,4 +1,81 @@
 ---
+- !ruby/object:Author
+  name: Sergey Yesenin
+  biography: Happyness
+- !ruby/object:Author
+  name: Agatha Christie
+  biography: Desert
+- !ruby/object:Author
+  name: Michael Bulgakov
+  biography: Love
+- !ruby/object:Author
+  name: Ivan Krilov
+  biography: Freedom
+- !ruby/object:Author
+  name: Alex Pushkin
+  biography: ''
+---
+- !ruby/object:Book
+  title: Black man
+  author: &1 !ruby/object:Author
+    name: Sergey Yesenin
+    biography: Happyness
+- !ruby/object:Book
+  title: About love
+  author: *1
+- !ruby/object:Book
+  title: The Murder of Roger Ackroyd
+  author: !ruby/object:Author
+    name: Agatha Christie
+    biography: Desert
+- !ruby/object:Book
+  title: Heart of a Dog
+  author: !ruby/object:Author
+    name: Michael Bulgakov
+    biography: Love
+- !ruby/object:Book
+  title: Eugene Onegin
+  author: !ruby/object:Author
+    name: Ivan Krilov
+    biography: Freedom
+---
+- !ruby/object:Reader
+  name: Mat
+  email: email@email
+  city: Dnipro
+  street: Street
+  house: 5
+- !ruby/object:Reader
+  name: Sat
+  email: mail@mail
+  city: Kiev
+  street: Street
+  house: 7
+- !ruby/object:Reader
+  name: Nat
+  email: gmail@gmail
+  city: Lviv
+  street: Street
+  house: 8
+- !ruby/object:Reader
+  name: Bat
+  email: freemail@freemail
+  city: city:man
+  street: Street
+  house: 10
+- !ruby/object:Reader
+  name: Kat
+  email: freemail@freemail
+  city: Oslo
+  street: Street
+  house: 11
+- !ruby/object:Reader
+  name: Dat
+  email: freemail@efreemail
+  city: Tokio
+  street: Street
+  house: 12
+---
 - !ruby/object:Order
   book: &1 !ruby/object:Book
     title: Black man
@@ -11,7 +88,7 @@
     city: Dnipro
     street: Street
     house: 5
-  date: 2018-11-20 13:33:26.612804525 +02:00
+  date: 2018-11-21 13:32:47.484215033 +02:00
 - !ruby/object:Order
   book: *1
   reader: &3 !ruby/object:Reader
@@ -20,7 +97,7 @@
     city: Kiev
     street: Street
     house: 7
-  date: 2018-11-20 13:33:26.612810519 +02:00
+  date: 2018-11-21 13:32:47.484221557 +02:00
 - !ruby/object:Order
   book: *1
   reader: &4 !ruby/object:Reader
@@ -29,7 +106,7 @@
     city: Lviv
     street: Street
     house: 8
-  date: 2018-11-20 13:33:26.612812794 +02:00
+  date: 2018-11-21 13:32:47.484223871 +02:00
 - !ruby/object:Order
   book: *1
   reader: &5 !ruby/object:Reader
@@ -38,13 +115,13 @@
     city: city:man
     street: Street
     house: 10
-  date: 2018-11-20 13:33:26.612814584 +02:00
+  date: 2018-11-21 13:32:47.484225732 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: About love
     author: *2
   reader: *3
-  date: 2018-11-20 13:33:26.612816351 +02:00
+  date: 2018-11-21 13:32:47.484227517 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: The Murder of Roger Ackroyd
@@ -52,7 +129,7 @@
       name: Agatha Christie
       biography: Desert
   reader: *4
-  date: 2018-11-20 13:33:26.612818069 +02:00
+  date: 2018-11-21 13:32:47.484229397 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Heart of a Dog
@@ -60,7 +137,7 @@
       name: Michael Bulgakov
       biography: Love
   reader: *5
-  date: 2018-11-20 13:33:26.612819744 +02:00
+  date: 2018-11-21 13:32:47.484231036 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Eugene Onegin
@@ -73,11 +150,89 @@
     city: Oslo
     street: Street
     house: 11
-  date: 2018-11-20 13:33:26.612821525 +02:00
+  date: 2018-11-21 13:32:47.484232775 +02:00
+---
+- !ruby/object:Author
+  name: Sergey Yesenin
+  biography: Happyness
+- !ruby/object:Author
+  name: Agatha Christie
+  biography: Desert
+- !ruby/object:Author
+  name: Michael Bulgakov
+  biography: Love
+- !ruby/object:Author
+  name: Ivan Krilov
+  biography: Freedom
+- !ruby/object:Author
+  name: Alex Pushkin
+  biography: ''
+---
+- !ruby/object:Book
+  title: Black man
+  author: &1 !ruby/object:Author
+    name: Sergey Yesenin
+    biography: Happyness
+- !ruby/object:Book
+  title: About love
+  author: *1
+- !ruby/object:Book
+  title: The Murder of Roger Ackroyd
+  author: !ruby/object:Author
+    name: Agatha Christie
+    biography: Desert
+- !ruby/object:Book
+  title: Heart of a Dog
+  author: !ruby/object:Author
+    name: Michael Bulgakov
+    biography: Love
+- !ruby/object:Book
+  title: Eugene Onegin
+  author: !ruby/object:Author
+    name: Ivan Krilov
+    biography: Freedom
+---
+- !ruby/object:Reader
+  name: Mat
+  email: email@email
+  city: Dnipro
+  street: Street
+  house: 5
+- !ruby/object:Reader
+  name: Sat
+  email: mail@mail
+  city: Kiev
+  street: Street
+  house: 7
+- !ruby/object:Reader
+  name: Nat
+  email: gmail@gmail
+  city: Lviv
+  street: Street
+  house: 8
+- !ruby/object:Reader
+  name: Bat
+  email: freemail@freemail
+  city: city:man
+  street: Street
+  house: 10
+- !ruby/object:Reader
+  name: Kat
+  email: freemail@freemail
+  city: Oslo
+  street: Street
+  house: 11
+- !ruby/object:Reader
+  name: Dat
+  email: freemail@efreemail
+  city: Tokio
+  street: Street
+  house: 12
+---
 - !ruby/object:Order
-  book: &6 !ruby/object:Book
+  book: &1 !ruby/object:Book
     title: Black man
-    author: &7 !ruby/object:Author
+    author: &2 !ruby/object:Author
       name: Sergey Yesenin
       biography: Happyness
   reader: !ruby/object:Reader
@@ -86,56 +241,56 @@
     city: Dnipro
     street: Street
     house: 5
-  date: 2018-11-20 13:48:39.943462447 +02:00
+  date: 2018-11-21 13:35:46.042271748 +02:00
 - !ruby/object:Order
-  book: *6
-  reader: &8 !ruby/object:Reader
+  book: *1
+  reader: &3 !ruby/object:Reader
     name: Sat
     email: mail@mail
     city: Kiev
     street: Street
     house: 7
-  date: 2018-11-20 13:48:39.943467412 +02:00
+  date: 2018-11-21 13:35:46.042277113 +02:00
 - !ruby/object:Order
-  book: *6
-  reader: &9 !ruby/object:Reader
+  book: *1
+  reader: &4 !ruby/object:Reader
     name: Nat
     email: gmail@gmail
     city: Lviv
     street: Street
     house: 8
-  date: 2018-11-20 13:48:39.943469717 +02:00
+  date: 2018-11-21 13:35:46.042279427 +02:00
 - !ruby/object:Order
-  book: *6
-  reader: &10 !ruby/object:Reader
+  book: *1
+  reader: &5 !ruby/object:Reader
     name: Bat
     email: freemail@freemail
     city: city:man
     street: Street
     house: 10
-  date: 2018-11-20 13:48:39.943471499 +02:00
+  date: 2018-11-21 13:35:46.042281462 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: About love
-    author: *7
-  reader: *8
-  date: 2018-11-20 13:48:39.943473354 +02:00
+    author: *2
+  reader: *3
+  date: 2018-11-21 13:35:46.042283163 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: The Murder of Roger Ackroyd
     author: !ruby/object:Author
       name: Agatha Christie
       biography: Desert
-  reader: *9
-  date: 2018-11-20 13:48:39.943475202 +02:00
+  reader: *4
+  date: 2018-11-21 13:35:46.042284964 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Heart of a Dog
     author: !ruby/object:Author
       name: Michael Bulgakov
       biography: Love
-  reader: *10
-  date: 2018-11-20 13:48:39.943477170 +02:00
+  reader: *5
+  date: 2018-11-21 13:35:46.042286647 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Eugene Onegin
@@ -148,11 +303,89 @@
     city: Oslo
     street: Street
     house: 11
-  date: 2018-11-20 13:48:39.943479160 +02:00
+  date: 2018-11-21 13:35:46.042288430 +02:00
+---
+- !ruby/object:Author
+  name: Sergey Yesenin
+  biography: Happyness
+- !ruby/object:Author
+  name: Agatha Christie
+  biography: Desert
+- !ruby/object:Author
+  name: Michael Bulgakov
+  biography: Love
+- !ruby/object:Author
+  name: Ivan Krilov
+  biography: Freedom
+- !ruby/object:Author
+  name: Alex Pushkin
+  biography: ''
+---
+- !ruby/object:Book
+  title: Black man
+  author: &1 !ruby/object:Author
+    name: Sergey Yesenin
+    biography: Happyness
+- !ruby/object:Book
+  title: About love
+  author: *1
+- !ruby/object:Book
+  title: The Murder of Roger Ackroyd
+  author: !ruby/object:Author
+    name: Agatha Christie
+    biography: Desert
+- !ruby/object:Book
+  title: Heart of a Dog
+  author: !ruby/object:Author
+    name: Michael Bulgakov
+    biography: Love
+- !ruby/object:Book
+  title: Eugene Onegin
+  author: !ruby/object:Author
+    name: Ivan Krilov
+    biography: Freedom
+---
+- !ruby/object:Reader
+  name: Mat
+  email: email@email
+  city: Dnipro
+  street: Street
+  house: 5
+- !ruby/object:Reader
+  name: Sat
+  email: mail@mail
+  city: Kiev
+  street: Street
+  house: 7
+- !ruby/object:Reader
+  name: Nat
+  email: gmail@gmail
+  city: Lviv
+  street: Street
+  house: 8
+- !ruby/object:Reader
+  name: Bat
+  email: freemail@freemail
+  city: city:man
+  street: Street
+  house: 10
+- !ruby/object:Reader
+  name: Kat
+  email: freemail@freemail
+  city: Oslo
+  street: Street
+  house: 11
+- !ruby/object:Reader
+  name: Dat
+  email: freemail@efreemail
+  city: Tokio
+  street: Street
+  house: 12
+---
 - !ruby/object:Order
-  book: &11 !ruby/object:Book
+  book: &1 !ruby/object:Book
     title: Black man
-    author: &12 !ruby/object:Author
+    author: &2 !ruby/object:Author
       name: Sergey Yesenin
       biography: Happyness
   reader: !ruby/object:Reader
@@ -161,56 +394,56 @@
     city: Dnipro
     street: Street
     house: 5
-  date: 2018-11-20 13:50:27.526980120 +02:00
+  date: 2018-11-21 13:36:36.509052039 +02:00
 - !ruby/object:Order
-  book: *11
-  reader: &13 !ruby/object:Reader
+  book: *1
+  reader: &3 !ruby/object:Reader
     name: Sat
     email: mail@mail
     city: Kiev
     street: Street
     house: 7
-  date: 2018-11-20 13:50:27.526986428 +02:00
+  date: 2018-11-21 13:36:36.509056993 +02:00
 - !ruby/object:Order
-  book: *11
-  reader: &14 !ruby/object:Reader
+  book: *1
+  reader: &4 !ruby/object:Reader
     name: Nat
     email: gmail@gmail
     city: Lviv
     street: Street
     house: 8
-  date: 2018-11-20 13:50:27.526989893 +02:00
+  date: 2018-11-21 13:36:36.509059338 +02:00
 - !ruby/object:Order
-  book: *11
-  reader: &15 !ruby/object:Reader
+  book: *1
+  reader: &5 !ruby/object:Reader
     name: Bat
     email: freemail@freemail
     city: city:man
     street: Street
     house: 10
-  date: 2018-11-20 13:50:27.526992832 +02:00
+  date: 2018-11-21 13:36:36.509061450 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: About love
-    author: *12
-  reader: *13
-  date: 2018-11-20 13:50:27.526995691 +02:00
+    author: *2
+  reader: *3
+  date: 2018-11-21 13:36:36.509063257 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: The Murder of Roger Ackroyd
     author: !ruby/object:Author
       name: Agatha Christie
       biography: Desert
-  reader: *14
-  date: 2018-11-20 13:50:27.526998271 +02:00
+  reader: *4
+  date: 2018-11-21 13:36:36.509065213 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Heart of a Dog
     author: !ruby/object:Author
       name: Michael Bulgakov
       biography: Love
-  reader: *15
-  date: 2018-11-20 13:50:27.527000767 +02:00
+  reader: *5
+  date: 2018-11-21 13:36:36.509106565 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Eugene Onegin
@@ -223,11 +456,89 @@
     city: Oslo
     street: Street
     house: 11
-  date: 2018-11-20 13:50:27.527003881 +02:00
+  date: 2018-11-21 13:36:36.509110167 +02:00
+---
+- !ruby/object:Author
+  name: Sergey Yesenin
+  biography: Happyness
+- !ruby/object:Author
+  name: Agatha Christie
+  biography: Desert
+- !ruby/object:Author
+  name: Michael Bulgakov
+  biography: Love
+- !ruby/object:Author
+  name: Ivan Krilov
+  biography: Freedom
+- !ruby/object:Author
+  name: Alex Pushkin
+  biography: ''
+---
+- !ruby/object:Book
+  title: Black man
+  author: &1 !ruby/object:Author
+    name: Sergey Yesenin
+    biography: Happyness
+- !ruby/object:Book
+  title: About love
+  author: *1
+- !ruby/object:Book
+  title: The Murder of Roger Ackroyd
+  author: !ruby/object:Author
+    name: Agatha Christie
+    biography: Desert
+- !ruby/object:Book
+  title: Heart of a Dog
+  author: !ruby/object:Author
+    name: Michael Bulgakov
+    biography: Love
+- !ruby/object:Book
+  title: Eugene Onegin
+  author: !ruby/object:Author
+    name: Ivan Krilov
+    biography: Freedom
+---
+- !ruby/object:Reader
+  name: Mat
+  email: email@email
+  city: Dnipro
+  street: Street
+  house: 5
+- !ruby/object:Reader
+  name: Sat
+  email: mail@mail
+  city: Kiev
+  street: Street
+  house: 7
+- !ruby/object:Reader
+  name: Nat
+  email: gmail@gmail
+  city: Lviv
+  street: Street
+  house: 8
+- !ruby/object:Reader
+  name: Bat
+  email: freemail@freemail
+  city: city:man
+  street: Street
+  house: 10
+- !ruby/object:Reader
+  name: Kat
+  email: freemail@freemail
+  city: Oslo
+  street: Street
+  house: 11
+- !ruby/object:Reader
+  name: Dat
+  email: freemail@efreemail
+  city: Tokio
+  street: Street
+  house: 12
+---
 - !ruby/object:Order
-  book: &16 !ruby/object:Book
+  book: &1 !ruby/object:Book
     title: Black man
-    author: &17 !ruby/object:Author
+    author: &2 !ruby/object:Author
       name: Sergey Yesenin
       biography: Happyness
   reader: !ruby/object:Reader
@@ -236,56 +547,56 @@
     city: Dnipro
     street: Street
     house: 5
-  date: 2018-11-20 13:50:50.613340920 +02:00
+  date: 2018-11-21 13:37:35.094594245 +02:00
 - !ruby/object:Order
-  book: *16
-  reader: &18 !ruby/object:Reader
+  book: *1
+  reader: &3 !ruby/object:Reader
     name: Sat
     email: mail@mail
     city: Kiev
     street: Street
     house: 7
-  date: 2018-11-20 13:50:50.613345747 +02:00
+  date: 2018-11-21 13:37:35.094599044 +02:00
 - !ruby/object:Order
-  book: *16
-  reader: &19 !ruby/object:Reader
+  book: *1
+  reader: &4 !ruby/object:Reader
     name: Nat
     email: gmail@gmail
     city: Lviv
     street: Street
     house: 8
-  date: 2018-11-20 13:50:50.613347910 +02:00
+  date: 2018-11-21 13:37:35.094601172 +02:00
 - !ruby/object:Order
-  book: *16
-  reader: &20 !ruby/object:Reader
+  book: *1
+  reader: &5 !ruby/object:Reader
     name: Bat
     email: freemail@freemail
     city: city:man
     street: Street
     house: 10
-  date: 2018-11-20 13:50:50.613349693 +02:00
+  date: 2018-11-21 13:37:35.094603068 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: About love
-    author: *17
-  reader: *18
-  date: 2018-11-20 13:50:50.613351448 +02:00
+    author: *2
+  reader: *3
+  date: 2018-11-21 13:37:35.094604745 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: The Murder of Roger Ackroyd
     author: !ruby/object:Author
       name: Agatha Christie
       biography: Desert
-  reader: *19
-  date: 2018-11-20 13:50:50.613353093 +02:00
+  reader: *4
+  date: 2018-11-21 13:37:35.094606656 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Heart of a Dog
     author: !ruby/object:Author
       name: Michael Bulgakov
       biography: Love
-  reader: *20
-  date: 2018-11-20 13:50:50.613354938 +02:00
+  reader: *5
+  date: 2018-11-21 13:37:35.094608339 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Eugene Onegin
@@ -298,11 +609,89 @@
     city: Oslo
     street: Street
     house: 11
-  date: 2018-11-20 13:50:50.613356571 +02:00
+  date: 2018-11-21 13:37:35.094610100 +02:00
+---
+- !ruby/object:Author
+  name: Sergey Yesenin
+  biography: Happyness
+- !ruby/object:Author
+  name: Agatha Christie
+  biography: Desert
+- !ruby/object:Author
+  name: Michael Bulgakov
+  biography: Love
+- !ruby/object:Author
+  name: Ivan Krilov
+  biography: Freedom
+- !ruby/object:Author
+  name: Alex Pushkin
+  biography: ''
+---
+- !ruby/object:Book
+  title: Black man
+  author: &1 !ruby/object:Author
+    name: Sergey Yesenin
+    biography: Happyness
+- !ruby/object:Book
+  title: About love
+  author: *1
+- !ruby/object:Book
+  title: The Murder of Roger Ackroyd
+  author: !ruby/object:Author
+    name: Agatha Christie
+    biography: Desert
+- !ruby/object:Book
+  title: Heart of a Dog
+  author: !ruby/object:Author
+    name: Michael Bulgakov
+    biography: Love
+- !ruby/object:Book
+  title: Eugene Onegin
+  author: !ruby/object:Author
+    name: Ivan Krilov
+    biography: Freedom
+---
+- !ruby/object:Reader
+  name: Mat
+  email: email@email
+  city: Dnipro
+  street: Street
+  house: 5
+- !ruby/object:Reader
+  name: Sat
+  email: mail@mail
+  city: Kiev
+  street: Street
+  house: 7
+- !ruby/object:Reader
+  name: Nat
+  email: gmail@gmail
+  city: Lviv
+  street: Street
+  house: 8
+- !ruby/object:Reader
+  name: Bat
+  email: freemail@freemail
+  city: city:man
+  street: Street
+  house: 10
+- !ruby/object:Reader
+  name: Kat
+  email: freemail@freemail
+  city: Oslo
+  street: Street
+  house: 11
+- !ruby/object:Reader
+  name: Dat
+  email: freemail@efreemail
+  city: Tokio
+  street: Street
+  house: 12
+---
 - !ruby/object:Order
-  book: &21 !ruby/object:Book
+  book: &1 !ruby/object:Book
     title: Black man
-    author: &22 !ruby/object:Author
+    author: &2 !ruby/object:Author
       name: Sergey Yesenin
       biography: Happyness
   reader: !ruby/object:Reader
@@ -311,56 +700,56 @@
     city: Dnipro
     street: Street
     house: 5
-  date: 2018-11-20 13:51:33.072809724 +02:00
+  date: 2018-11-21 13:38:42.620586310 +02:00
 - !ruby/object:Order
-  book: *21
-  reader: &23 !ruby/object:Reader
+  book: *1
+  reader: &3 !ruby/object:Reader
     name: Sat
     email: mail@mail
     city: Kiev
     street: Street
     house: 7
-  date: 2018-11-20 13:51:33.072814925 +02:00
+  date: 2018-11-21 13:38:42.620591150 +02:00
 - !ruby/object:Order
-  book: *21
-  reader: &24 !ruby/object:Reader
+  book: *1
+  reader: &4 !ruby/object:Reader
     name: Nat
     email: gmail@gmail
     city: Lviv
     street: Street
     house: 8
-  date: 2018-11-20 13:51:33.072817110 +02:00
+  date: 2018-11-21 13:38:42.620593278 +02:00
 - !ruby/object:Order
-  book: *21
-  reader: &25 !ruby/object:Reader
+  book: *1
+  reader: &5 !ruby/object:Reader
     name: Bat
     email: freemail@freemail
     city: city:man
     street: Street
     house: 10
-  date: 2018-11-20 13:51:33.072818871 +02:00
+  date: 2018-11-21 13:38:42.620595037 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: About love
-    author: *22
-  reader: *23
-  date: 2018-11-20 13:51:33.072820554 +02:00
+    author: *2
+  reader: *3
+  date: 2018-11-21 13:38:42.620596893 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: The Murder of Roger Ackroyd
     author: !ruby/object:Author
       name: Agatha Christie
       biography: Desert
-  reader: *24
-  date: 2018-11-20 13:51:33.072822279 +02:00
+  reader: *4
+  date: 2018-11-21 13:38:42.620598643 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Heart of a Dog
     author: !ruby/object:Author
       name: Michael Bulgakov
       biography: Love
-  reader: *25
-  date: 2018-11-20 13:51:33.072824068 +02:00
+  reader: *5
+  date: 2018-11-21 13:38:42.620600426 +02:00
 - !ruby/object:Order
   book: !ruby/object:Book
     title: Eugene Onegin
@@ -373,754 +762,4 @@
     city: Oslo
     street: Street
     house: 11
-  date: 2018-11-20 13:51:33.072825781 +02:00
-- !ruby/object:Order
-  book: &26 !ruby/object:Book
-    title: Black man
-    author: &27 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:53:08.655425268 +02:00
-- !ruby/object:Order
-  book: *26
-  reader: &28 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:53:08.655430659 +02:00
-- !ruby/object:Order
-  book: *26
-  reader: &29 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:53:08.655432932 +02:00
-- !ruby/object:Order
-  book: *26
-  reader: &30 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:53:08.655434699 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *27
-  reader: *28
-  date: 2018-11-20 13:53:08.655436599 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *29
-  date: 2018-11-20 13:53:08.655438484 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *30
-  date: 2018-11-20 13:53:08.655440356 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:53:08.655442190 +02:00
-- !ruby/object:Order
-  book: &31 !ruby/object:Book
-    title: Black man
-    author: &32 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:54:33.496612145 +02:00
-- !ruby/object:Order
-  book: *31
-  reader: &33 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:54:33.496618917 +02:00
-- !ruby/object:Order
-  book: *31
-  reader: &34 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:54:33.496622214 +02:00
-- !ruby/object:Order
-  book: *31
-  reader: &35 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:54:33.496625685 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *32
-  reader: *33
-  date: 2018-11-20 13:54:33.496628575 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *34
-  date: 2018-11-20 13:54:33.496631777 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *35
-  date: 2018-11-20 13:54:33.496634709 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:54:33.496637348 +02:00
-- !ruby/object:Order
-  book: &36 !ruby/object:Book
-    title: Black man
-    author: &37 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:55:32.753509435 +02:00
-- !ruby/object:Order
-  book: *36
-  reader: &38 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:55:32.753514323 +02:00
-- !ruby/object:Order
-  book: *36
-  reader: &39 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:55:32.753516433 +02:00
-- !ruby/object:Order
-  book: *36
-  reader: &40 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:55:32.753518293 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *37
-  reader: *38
-  date: 2018-11-20 13:55:32.753519918 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *39
-  date: 2018-11-20 13:55:32.753521699 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *40
-  date: 2018-11-20 13:55:32.753523389 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:55:32.753525117 +02:00
-- !ruby/object:Order
-  book: &41 !ruby/object:Book
-    title: Black man
-    author: &42 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:55:42.288747926 +02:00
-- !ruby/object:Order
-  book: *41
-  reader: &43 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:55:42.288752612 +02:00
-- !ruby/object:Order
-  book: *41
-  reader: &44 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:55:42.288754857 +02:00
-- !ruby/object:Order
-  book: *41
-  reader: &45 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:55:42.288756782 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *42
-  reader: *43
-  date: 2018-11-20 13:55:42.288758572 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *44
-  date: 2018-11-20 13:55:42.288760426 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *45
-  date: 2018-11-20 13:55:42.288762243 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:55:42.288763953 +02:00
-- !ruby/object:Order
-  book: &46 !ruby/object:Book
-    title: Black man
-    author: &47 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:56:09.749882547 +02:00
-- !ruby/object:Order
-  book: *46
-  reader: &48 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:56:09.749887043 +02:00
-- !ruby/object:Order
-  book: *46
-  reader: &49 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:56:09.749889204 +02:00
-- !ruby/object:Order
-  book: *46
-  reader: &50 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:56:09.749890979 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *47
-  reader: *48
-  date: 2018-11-20 13:56:09.749892626 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *49
-  date: 2018-11-20 13:56:09.749894397 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *50
-  date: 2018-11-20 13:56:09.749896136 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:56:09.749897872 +02:00
-- !ruby/object:Order
-  book: &51 !ruby/object:Book
-    title: Black man
-    author: &52 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:56:27.697499244 +02:00
-- !ruby/object:Order
-  book: *51
-  reader: &53 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:56:27.697504192 +02:00
-- !ruby/object:Order
-  book: *51
-  reader: &54 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:56:27.697506332 +02:00
-- !ruby/object:Order
-  book: *51
-  reader: &55 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:56:27.697508137 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *52
-  reader: *53
-  date: 2018-11-20 13:56:27.697509748 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *54
-  date: 2018-11-20 13:56:27.697511453 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *55
-  date: 2018-11-20 13:56:27.697513186 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:56:27.697514928 +02:00
-- !ruby/object:Order
-  book: &56 !ruby/object:Book
-    title: Black man
-    author: &57 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:56:39.241764696 +02:00
-- !ruby/object:Order
-  book: *56
-  reader: &58 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:56:39.241769801 +02:00
-- !ruby/object:Order
-  book: *56
-  reader: &59 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:56:39.241771970 +02:00
-- !ruby/object:Order
-  book: *56
-  reader: &60 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:56:39.241773620 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *57
-  reader: *58
-  date: 2018-11-20 13:56:39.241775366 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *59
-  date: 2018-11-20 13:56:39.241776983 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *60
-  date: 2018-11-20 13:56:39.241778720 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:56:39.241780335 +02:00
-- !ruby/object:Order
-  book: &61 !ruby/object:Book
-    title: Black man
-    author: &62 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:57:05.040714972 +02:00
-- !ruby/object:Order
-  book: *61
-  reader: &63 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:57:05.040720098 +02:00
-- !ruby/object:Order
-  book: *61
-  reader: &64 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:57:05.040722273 +02:00
-- !ruby/object:Order
-  book: *61
-  reader: &65 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:57:05.040723998 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *62
-  reader: *63
-  date: 2018-11-20 13:57:05.040725850 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *64
-  date: 2018-11-20 13:57:05.040727506 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *65
-  date: 2018-11-20 13:57:05.040729257 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:57:05.040730899 +02:00
-- !ruby/object:Order
-  book: &66 !ruby/object:Book
-    title: Black man
-    author: &67 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:57:46.639957188 +02:00
-- !ruby/object:Order
-  book: *66
-  reader: &68 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:57:46.639962514 +02:00
-- !ruby/object:Order
-  book: *66
-  reader: &69 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:57:46.639964805 +02:00
-- !ruby/object:Order
-  book: *66
-  reader: &70 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:57:46.639966848 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *67
-  reader: *68
-  date: 2018-11-20 13:57:46.639968676 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *69
-  date: 2018-11-20 13:57:46.639970471 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *70
-  date: 2018-11-20 13:57:46.639972177 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:57:46.639973920 +02:00
-- !ruby/object:Order
-  book: &71 !ruby/object:Book
-    title: Black man
-    author: &72 !ruby/object:Author
-      name: Sergey Yesenin
-      biography: Happyness
-  reader: !ruby/object:Reader
-    name: Mat
-    email: email@email
-    city: Dnipro
-    street: Street
-    house: 5
-  date: 2018-11-20 13:58:04.694589646 +02:00
-- !ruby/object:Order
-  book: *71
-  reader: &73 !ruby/object:Reader
-    name: Sat
-    email: mail@mail
-    city: Kiev
-    street: Street
-    house: 7
-  date: 2018-11-20 13:58:04.694595083 +02:00
-- !ruby/object:Order
-  book: *71
-  reader: &74 !ruby/object:Reader
-    name: Nat
-    email: gmail@gmail
-    city: Lviv
-    street: Street
-    house: 8
-  date: 2018-11-20 13:58:04.694597355 +02:00
-- !ruby/object:Order
-  book: *71
-  reader: &75 !ruby/object:Reader
-    name: Bat
-    email: freemail@freemail
-    city: city:man
-    street: Street
-    house: 10
-  date: 2018-11-20 13:58:04.694599102 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: About love
-    author: *72
-  reader: *73
-  date: 2018-11-20 13:58:04.694600923 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: The Murder of Roger Ackroyd
-    author: !ruby/object:Author
-      name: Agatha Christie
-      biography: Desert
-  reader: *74
-  date: 2018-11-20 13:58:04.694602621 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Heart of a Dog
-    author: !ruby/object:Author
-      name: Michael Bulgakov
-      biography: Love
-  reader: *75
-  date: 2018-11-20 13:58:04.694604503 +02:00
-- !ruby/object:Order
-  book: !ruby/object:Book
-    title: Eugene Onegin
-    author: !ruby/object:Author
-      name: Ivan Krilov
-      biography: Freedom
-  reader: !ruby/object:Reader
-    name: Kat
-    email: freemail@freemail
-    city: Oslo
-    street: Street
-    house: 11
-  date: 2018-11-20 13:58:04.694606206 +02:00
+  date: 2018-11-21 13:38:42.620602166 +02:00

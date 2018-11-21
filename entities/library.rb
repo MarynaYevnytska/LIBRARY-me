@@ -8,8 +8,9 @@ class Library
     @books = []
     @readers = []
     @orders = []
-    load_db.flatten.each { |entity| add(entity) }
+    load_db
   end
+
 
   def add(entity)
     case entity
