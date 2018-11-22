@@ -7,7 +7,7 @@ require_relative 'entities/reader.rb'
 require_relative 'entities/library.rb'
 require_relative 'moduls/validation.rb'
 require_relative 'moduls/load.rb'
-require_relative 'moduls/statistica.rb'
+require_relative 'moduls/statistics.rb'
 require_relative 'error/errors.rb'
 require 'date'
 require 'yaml'
@@ -51,7 +51,7 @@ authors.each { |author| library.add(author) }
 books.each { |book| library.add(book) }
 readers.each { |reader| library.add(reader) }
 orders.each { |order| library.add(order) }
-library.datas_store
+library.data_store
 library.save_to_store
 most_popular_book(library.orders)
 top_reader(library.orders)
