@@ -7,6 +7,6 @@ module Storage
   end
 
   def load_db
-    list = File.open(FILE_NAME) { |f| YAML.load_documents f }
+    File.open(FILE_NAME) { |f| YAML.load_documents f }
   end
 end

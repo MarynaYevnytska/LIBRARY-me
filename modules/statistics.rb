@@ -15,5 +15,5 @@ module Statistics
   def readers_the_most_popular_books(set, num = 1)
     books = top_book(set, num)
     set.select { |order| books.include? order.book }.map(&:reader).uniq.count
-end
+  end
 end

@@ -1,40 +1,35 @@
 # frozen_string_literal: true
 
-require_relative 'entities/author.rb'
-require_relative 'entities/book.rb'
-require_relative 'entities/order.rb'
-require_relative 'entities/reader.rb'
-require_relative 'entities/library.rb'
-
+require_relative './autoload/autoload.rb'
 library = Library.new
 
-authors = [author1 = Author.new('Sergey Yesenin', 'Happyness'),
-           author2 = Author.new('Agatha Christie', 'Desert'),
-           author3 = Author.new('Michael Bulgakov', 'Love'),
-           author4 = Author.new('Ivan Krilov', 'Freedom'),
-           author6 = Author.new('Alex Pushkin')]
+authors = [Author.new('Sergey Yesenin', 'Happyness'),
+           Author.new('Agatha Christie', 'Desert'),
+           Author.new('Michael Bulgakov', 'Love'),
+           Author.new('Ivan Krilov', 'Freedom'),
+           Author.new('Alex Pushkin')]
 
-books = [book1 = Book.new('Black man', author1),
-         book2 = Book.new('About love', author1),
-         book3 = Book.new('The Murder of Roger Ackroyd', author2),
-         book4 = Book.new('Heart of a Dog', author3),
-         book5 = Book.new('Eugene Onegin', author4)]
+books = [Book.new('Black man', authors[1]),
+         Book.new('About love', authors[1]),
+         Book.new('The Murder of Roger Ackroyd', authors[2]),
+         Book.new('Heart of a Dog', authors[3]),
+         Book.new('Eugene Onegin', authors[4])]
 
-readers = [reader1 = Reader.new(name: 'Mat', email: 'email@email', city: 'Dnipro', street: 'Street', house: 5),
-           reader2 = Reader.new(name: 'Sat', email: 'mail@mail', city: 'Kiev', street: 'Street', house: 7),
-           reader3 = Reader.new(name: 'Nat', email: 'gmail@gmail', city: 'Lviv', street: 'Street', house: 8),
-           reader4 = Reader.new(name: 'Bat', email: 'freemail@freemail', city: 'city:man', street: 'Street', house: 10),
-           reader5 = Reader.new(name: 'Kat', email: 'freemail@freemail', city: 'Oslo', street: 'Street', house: 11),
-           reader6 = Reader.new(name: 'Dat', email: 'freemail@efreemail', city: 'Tokio', street: 'Street', house: 12)]
+readers = [Reader.new(name: 'Mat', email: 'email@email', city: 'Dnipro', street: 'Street', house: 5),
+           Reader.new(name: 'Sat', email: 'mail@mail', city: 'Kiev', street: 'Street', house: 7),
+           Reader.new(name: 'Nat', email: 'gmail@gmail', city: 'Lviv', street: 'Street', house: 8),
+           Reader.new(name: 'Bat', email: 'freemail@freemail', city: 'city:man', street: 'Street', house: 10),
+           Reader.new(name: 'Kat', email: 'freemail@freemail', city: 'Oslo', street: 'Street', house: 11),
+           Reader.new(name: 'Dat', email: 'freemail@efreemail', city: 'Tokio', street: 'Street', house: 12)]
 
-orders = [order1 = Order.new(book1, reader1),
-          order3 = Order.new(book1, reader2),
-          order4 = Order.new(book1, reader3),
-          order5 = Order.new(book1, reader3),
-          order6 = Order.new(book2, reader3),
-          order7 = Order.new(book3, reader3),
-          order8 = Order.new(book4, reader4),
-          order9 = Order.new(book5, reader5)]
+orders = [Order.new(books[1], readers[1]),
+          Order.new(books[1], readers[2]),
+          Order.new(books[1], readers[3]),
+          Order.new(books[1], readers[3]),
+          Order.new(books[2], readers[3]),
+          Order.new(books[3], readers[3]),
+          Order.new(books[4], readers[4]),
+          Order.new(books[5], readers[5])]
 
 authors.each { |author| library.add(author) }
 books.each { |book| library.add(book) }
@@ -44,4 +39,4 @@ library.data_store
 library.save_to_store
 library.top_book(library.orders)
 library.top_reader(library.orders)
-readers_the_most_popular_books(library.orders)
+library.readers_the_most_popular_books(library.orders)

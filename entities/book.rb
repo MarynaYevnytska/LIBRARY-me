@@ -1,7 +1,7 @@
 # frozen_string_literal: true
-require_relative '../moduls/validation.rb'
-require_relative '../error/errors.rb'
 
+require_relative '../modules/validation.rb'
+require_relative '../errors/errors.rb'
 class Book
   attr_reader :title, :author
 

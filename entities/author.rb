@@ -1,14 +1,12 @@
 # frozen_string_literal: true
-require_relative '../moduls/validation.rb'
-require_relative '../error/errors.rb'
 
-
+# Entities Author
+require_relative '../modules/validation.rb'
+require_relative '../errors/errors.rb'
 class Author
   attr_reader :name, :biography
-
   include Validation
   include Errors
-
   def initialize(name, biography = '')
     @name = name
     @biography = biography

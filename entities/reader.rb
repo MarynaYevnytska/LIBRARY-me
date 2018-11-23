@@ -1,6 +1,4 @@
 # frozen_string_literal: true
-require_relative'../moduls/validation.rb'
-require_relative '../error/errors.rb'
 
 class Reader
   attr_accessor :name, :email, :city, :street, :house
