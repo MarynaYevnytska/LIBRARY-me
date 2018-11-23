@@ -1,7 +1,17 @@
 # frozen_string_literal: true
+require 'date'
+require 'yaml'
+
+require_relative '../moduls/load.rb'
+require_relative '../moduls/statistics.rb'
+require_relative '../error/errors.rb'
 
 class Library
+
   include Enumerable
+  include Storage
+  include Statistics
+
   attr_reader :authors, :books, :readers, :orders
   def initialize
     @authors = []

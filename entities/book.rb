@@ -1,7 +1,12 @@
 # frozen_string_literal: true
+require_relative '../moduls/validation.rb'
+require_relative '../error/errors.rb'
 
 class Book
   attr_reader :title, :author
+
+  include Validation
+  include Errors
 
   def initialize(title, author)
     @title = title

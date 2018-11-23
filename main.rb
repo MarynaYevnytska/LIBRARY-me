@@ -5,17 +5,6 @@ require_relative 'entities/book.rb'
 require_relative 'entities/order.rb'
 require_relative 'entities/reader.rb'
 require_relative 'entities/library.rb'
-require_relative 'moduls/validation.rb'
-require_relative 'moduls/load.rb'
-require_relative 'moduls/statistics.rb'
-require_relative 'error/errors.rb'
-require 'date'
-require 'yaml'
-
-include Validation
-include Errors
-include Storage
-include Statistics
 
 library = Library.new
 

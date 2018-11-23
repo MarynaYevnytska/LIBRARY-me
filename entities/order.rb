@@ -1,7 +1,12 @@
 # frozen_string_literal: true
+require_relative '../moduls/validation.rb'
+require_relative '../error/errors.rb'
 
 class Order
   attr_reader :book, :reader, :date
+
+  include Validation
+  include Errors
 
   def initialize(book, reader, date = Time.now)
     @book = book
