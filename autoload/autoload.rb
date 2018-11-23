@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'date'
 require 'yaml'
 require_relative'../errors/errors.rb'
 require_relative'../modules/validation.rb'

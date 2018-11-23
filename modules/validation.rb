@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 module Validation
-  def  validate_emptiness(object)
+  include Errors
+  def validate_emptiness(object)
     raise EmptyStringError if object.to_s.empty?
   end
 

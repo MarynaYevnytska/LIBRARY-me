@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'date'
+
 class Order
   attr_reader :book, :reader, :date
 

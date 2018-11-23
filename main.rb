@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative './autoload/autoload.rb'
+require 'pry'
 library = Library.new
 
 authors = [Author.new('Sergey Yesenin', 'Happyness'),
@@ -8,7 +9,7 @@ authors = [Author.new('Sergey Yesenin', 'Happyness'),
            Author.new('Michael Bulgakov', 'Love'),
            Author.new('Ivan Krilov', 'Freedom'),
            Author.new('Alex Pushkin')]
-
+# binding.pry
 books = [Book.new('Black man', authors[1]),
          Book.new('About love', authors[1]),
          Book.new('The Murder of Roger Ackroyd', authors[2]),
@@ -29,7 +30,7 @@ orders = [Order.new(books[1], readers[1]),
           Order.new(books[2], readers[3]),
           Order.new(books[3], readers[3]),
           Order.new(books[4], readers[4]),
-          Order.new(books[5], readers[5])]
+          Order.new(books[1], readers[5])]
 
 authors.each { |author| library.add(author) }
 books.each { |book| library.add(book) }
@@ -40,3 +41,4 @@ library.save_to_store
 library.top_book(library.orders)
 library.top_reader(library.orders)
 library.readers_the_most_popular_books(library.orders)
+binding.pry

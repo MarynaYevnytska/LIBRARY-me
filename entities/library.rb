@@ -3,6 +3,7 @@
 class Library
   include Storage
   include Statistics
+  include Errors
 
   attr_reader :authors, :books, :readers, :orders
   def initialize
