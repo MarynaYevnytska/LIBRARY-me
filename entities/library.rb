@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class Library
+  include Enumerable
   attr_reader :authors, :books, :readers, :orders
-
   def initialize
     @authors = []
     @books = []
@@ -22,7 +22,7 @@ class Library
   end
 
   def data_store
-    storage={authors: @authors, books: @books, readers: @readers,orders: @readers}
+    storage = { authors: @authors, books: @books, readers: @readers, orders: @readers }
   end
 
   def save_to_store

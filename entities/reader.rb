@@ -15,14 +15,10 @@ class Reader
   private
 
   def validation(name, email, city, street, house)
-    validate_class(name, String)
-    validate_class(email, String)
-    validate_class(city, String)
-    validate_class(street, String)
+    [name, email, city, street].map do |item|
+      validate_class(item, String)
+      validate_emptiness(item)
+    end
     validate_class(house, Integer)
-    validate_emptiness(name)
-    validate_emptiness(email)
-    validate_emptiness(city)
-    validate_emptiness(street)
   end
 end

@@ -15,7 +15,7 @@ require 'yaml'
 include Validation
 include Errors
 include Storage
-include Statistica
+include Statistics
 
 library = Library.new
 
@@ -53,8 +53,6 @@ readers.each { |reader| library.add(reader) }
 orders.each { |order| library.add(order) }
 library.data_store
 library.save_to_store
-most_popular_book(library.orders)
-top_reader(library.orders)
-
-# self.top_position(library.orders,:reader,:name)
-# self.top_position(set,:book, :title)
+library.top_book(library.orders)
+library.top_reader(library.orders)
+readers_the_most_popular_books(library.orders)
