@@ -19,6 +19,7 @@ database/database.yaml
 'moduls/statistica.rb'
 error:/
 moduls:/
+database/database.yml 
 
 # Used by dotenv library to load environment variables.
 # .env

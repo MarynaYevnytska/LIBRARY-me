@@ -12,6 +12,7 @@ module Errors
       super('You try to send empty string!')
     end
   end
+
   class UndefinedLibraryEntity < StandardError
     def initialize
       super('Library accepts only Book, Author, Order, Reader classes!')

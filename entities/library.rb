@@ -24,11 +24,13 @@ class Library
     end
   end
 
-  def data_store
-    { authors: @authors, books: @books, readers: @readers, orders: @readers }
-  end
-
   def save_to_store
     save(data_store)
+  end
+
+  private
+
+  def data_store
+    { authors: @authors, books: @books, readers: @readers, orders: @readers }
   end
 end

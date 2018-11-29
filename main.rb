@@ -9,7 +9,6 @@ authors = [Author.new('Sergey Yesenin', 'Happyness'),
            Author.new('Michael Bulgakov', 'Love'),
            Author.new('Ivan Krilov', 'Freedom'),
            Author.new('Alex Pushkin')]
-# binding.pry
 books = [Book.new('Black man', authors[1]),
          Book.new('About love', authors[1]),
          Book.new('The Murder of Roger Ackroyd', authors[2]),
@@ -36,9 +35,7 @@ authors.each { |author| library.add(author) }
 books.each { |book| library.add(book) }
 readers.each { |reader| library.add(reader) }
 orders.each { |order| library.add(order) }
-library.data_store
 library.save_to_store
 library.top_book(library.orders)
 library.top_reader(library.orders)
 library.readers_the_most_popular_books(library.orders)
-binding.pry
