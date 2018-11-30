@@ -20,7 +20,7 @@ database/database.yaml
 error:/
 moduls:/
 database/
-database/database.yml
+database.yml
 
 # Used by dotenv library to load environment variables.
 # .env
