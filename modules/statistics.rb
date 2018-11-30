@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module Statistics
-
   def top_book(set, num = 1)
     sorted = set.group_by(&:book).sort_by { |_book_item, order| -order.count }.first(num)
     sorted.to_h.keys

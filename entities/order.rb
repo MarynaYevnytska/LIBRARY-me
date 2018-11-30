@@ -1,7 +1,3 @@
-
-
-#require 'date'
-
 class Order
   attr_reader :book, :reader, :date
 
